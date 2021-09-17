@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}
+
+/* mb-section */
+
+.mb-section {
+  margin-top: -6rem;
+}
+.mb-section div {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* sns-section */
+
+.swiper-wrapper.animated {
+  transition: 0.5s ease-out;
+}
+.swiper-slide .square {
+  width: 100%;
+}
+.sns-section .swiper-slide {
+  cursor: pointer;
+}
+.sns-section .swiper-slide .square {
+  position: relative;
+  background-size: 120%;
+  transition: all 0.5s;
+}
+.sns-section .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  border-radius: 0;
+  background: #fff;
+  transition: all 0.5s;
+}
+.sns-section .swiper-slide:hover .square {
+  background-position: bottom center;
+}
+.sns-section .swiper-slide:hover .text {
+  transform: translateY(0);
+  border-radius: 50% 50% 0 0;
+}
+.sns-section .bar {
+  width: 5rem;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+.sns-section .bar p {
+  width: 5rem;
+  height: 4px;
+  margin-bottom: 0;
+  background: #ddd;
+  border-radius: 5rem;
+}
+.sns-section .text p {
+  padding: 0 1rem;
+  color: #999;
+}
