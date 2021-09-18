@@ -23,20 +23,76 @@ const mb_swiper = new Swiper(".mb-section .swiper", {
     el: ".swiper-pagination",
     type: "progressbar", // 'bullets' or 'progressbar' or 'fraction' or 'custom'
   },
-  
+
   // Breakpoints
   breakpoints: {
     768: {
       // when window width is >= 768px
-      
     },
-    1024: {
+    992: {
       // when window width is >= 1024px
-      
     },
     1200: {
       // when window width is >= 1200px
-      
+    },
+    1400: {
+      // when window width is >= 1200px
+    },
+  }, // 반응형 슬라이드
+});
+
+const best_swiper = new Swiper(".best-section .swiper", {
+  speed: 300, // 슬라이드 / 페이드 속도
+
+  // Effects
+  effect: "slide", // 전환 효과 'slide' or 'fade' or 'cube' or 'coverflow' or 'flip'
+
+  centeredSlides: false, // 슬라이드 가운데 배치
+
+  // Clicks
+  slideToClickedSlide: false,
+
+  // loop
+  loop: true, // 무한반복
+
+  // navigation (7183)
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // pagination (7715)
+  pagination: {
+    el: ".swiper-pagination",
+    bulletElement: "span",
+    clickable: true, // 바 클릭 가능 여부
+    hideOnClick: false,
+    type: "bullets", // 'bullets' or 'progressbar' or 'fraction' or 'custom'
+    dynamicBullets: true,
+    dynamicMainBullets: 1,
+  },
+
+  // Breakpoints
+  breakpoints: {
+    768: {
+      // when window width is >= 768px
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    992: {
+      // when window width is >= 1024px
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    1200: {
+      // when window width is >= 1200px
+      slidesPerView: 4,
+      spaceBetween: 10,
+    },
+    1400: {
+      // when window width is >= 1400px
+      slidesPerView: 4,
+      spaceBetween: 10,
     },
   }, // 반응형 슬라이드
 });
@@ -62,13 +118,20 @@ const sns_swiper = new Swiper(".sns-section .swiper", {
       slidesPerView: 2,
       spaceBetween: 10,
     },
-    1024: {
+    992: {
       // when window width is >= 1024px
       slidesPerView: 3,
+      spaceBetween: 10,
     },
     1200: {
       // when window width is >= 1200px
       slidesPerView: 4,
+      spaceBetween: 10,
+    },
+    1400: {
+      // when window width is >= 1200px
+      slidesPerView: 5,
+      spaceBetween: 10,
     },
   }, // 반응형 슬라이드
 
@@ -91,7 +154,7 @@ const sns_swiper = new Swiper(".sns-section .swiper", {
     clickable: true, // 바 클릭 가능 여부
     hideOnClick: false,
     type: "bullets", // 'bullets' or 'progressbar' or 'fraction' or 'custom'
-    dynamicBullets: false,
+    dynamicBullets: true,
     dynamicMainBullets: 1,
   },
 

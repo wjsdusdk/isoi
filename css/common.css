@@ -1,14 +1,5 @@
 @charset "utf-8";
 
-@media (min-width: 576px) {
-}
-@media (min-width: 768px) {
-}
-@media (min-width: 992px) {
-}
-@media (min-width: 1200px) {
-}
-
 .a {
   background-color: #ff99a5;
 }
@@ -61,13 +52,13 @@ header {
   top: 0;
   left: 0;
   background: transparent;
-  z-index: 90;
 }
 header .container {
   height: 100%;
 }
 header h6 {
-  height: 3rem;
+  height: 2.5rem;
+  z-index: 2;
 }
 
 /* header - menu_icon */
@@ -285,9 +276,49 @@ footer .bottom .icon {
   opacity: 1;
 }
 
+/* more */
+
+.more {
+  display: block;
+  width: 150px;
+  height: 40px;
+  margin: 50px auto;
+  font-size: 20px;
+  color: #777;
+  line-height: 33px;
+  text-align: center;
+  border: 1px solid rgba(123, 123, 123, 0.3);
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+.more p {
+  display: inline-block;
+  margin-left: 40px;
+  transition: all 0.3s;
+}
+.more img {
+  opacity: 0;
+  width: 30px;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+.more:hover {
+  border: 1px solid rgba(123, 123, 123, 1);
+}
+.more:hover p {
+  margin-left: 0;
+}
+.more:hover img {
+  opacity: 1;
+}
+
 @media (min-width: 576px) {
 }
 @media (min-width: 768px) {
+  header {
+    height: 7rem;
+  }
+
   .search_icon p:nth-child(1).on {
     border: 2px solid #333;
   }
@@ -299,25 +330,6 @@ footer .bottom .icon {
   .menu_2 {
     width: 30%;
   }
-
-  .arrow-container {
-    width: calc(100% - 10rem);
-  }
-  .arrow span {
-    font-size: 3rem;
-    color: rgba(0, 0, 0, 0.2);
-    background: rgba(0, 0, 0, 0);
-    transition: all 0.3s;
-  }
-  .arrow span:hover {
-    color: rgba(0, 0, 0, 0.5);
-  }
-  .prev {
-    left: -5rem;
-  }
-  .next {
-    right: -5rem;
-  }
 }
 @media (min-width: 992px) {
 }
@@ -325,10 +337,6 @@ footer .bottom .icon {
   .menu_1,
   .menu_2 {
     width: 25%;
-  }
-
-  .arrow span {
-    font-size: 4rem;
   }
 }
 @media (min-width: 1400px) {

@@ -25,7 +25,7 @@
   position: relative;
   overflow: hidden;
   list-style: none;
-  padding: 0;
+  padding: 0 0 30px 0; /*  */
   z-index: 1;
 }
 .swiper-vertical > .swiper-wrapper {
@@ -56,6 +56,7 @@
   height: 100%;
   position: relative;
   transition-property: transform;
+  overflow: hidden;
 }
 .swiper-slide-invisible-blank {
   visibility: hidden;
@@ -167,7 +168,7 @@
   height: var(--swiper-virtual-size);
 }
 :root {
-  --swiper-navigation-size: 44px;
+  --swiper-navigation-size: 30px;
 }
 .swiper-button-next,
 .swiper-button-prev {
@@ -176,6 +177,7 @@
   width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
   margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  transform: translateY(-15px); /*  */
   z-index: 10;
   cursor: pointer;
   display: flex;
@@ -234,7 +236,7 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-  bottom: 10px;
+  bottom: 0; /*  */
   left: 0;
   width: 100%;
 }
@@ -577,4 +579,15 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: hidden;
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
 }
