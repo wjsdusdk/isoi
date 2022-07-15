@@ -3,7 +3,7 @@
 /* mb-section */
 
 .mb-section {
-  margin-top: -6rem;
+  /* margin-top: -6rem; */
 }
 .mb-section div {
   height: 100vh;
@@ -14,39 +14,215 @@
 
 /* best-section */
 
-.best-section .text {
+.best-section .swiper-slide a {
+  display: inline-block;
+}
+.best-section .swiper-slide li:nth-child(1) {
+  height: 30rem;
+}
+.best-section .swiper-slide img {
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  transition: all 0.2s;
+  transform-origin: right bottom;
+}
+.best-section li:nth-child(2) {
   padding: 2rem 0 0;
+}
+.best-section .swiper-slide a:hover img {
+  transform: rotate(10deg);
+  transform-origin: right bottom;
+}
+
+/* line-section */
+
+.line-section {
+  position: relative;
+  height: 85rem;
+}
+.line-section h4 {
+  line-height: 3rem;
+}
+.line-section .line_bn li {
+  position: absolute;
+  width: 100%;
+  height: 70rem;
+  top: 13rem;
+  left: 0;
+  padding-top: 3rem;
+}
+.line-section .line_bn li:nth-child(1) {
+  background: url(../images/line_01.png) center;
+  background-size: cover;
+}
+.line-section .line_bn li:nth-child(2) {
+  display: none;
+  background: url(../images/line_02.png) center;
+  background-size: cover;
+}
+.line-section .line_bn li:nth-child(3) {
+  display: none;
+  background: url(../images/line_03.png) center;
+  background-size: cover;
+}
+.line-section .line_bn li > p {
+  margin-bottom: 2rem;
+}
+.line-section .line_bn li > p:nth-child(1) {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.line-section .more {
+  margin: 0 auto;
+}
+
+.line-section .line_tabs {
+  position: absolute;
+  width: 100%;
+  height: 5rem;
+  top: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.line-section .line_tab {
+  width: 33.33%;
+  height: 4rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background: #fff;
+  text-shadow: 0 0 5px #000;
+  text-align: center;
+  border-radius: 2rem 2rem 0 0;
+  line-height: 4rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s;
+  z-index: 20;
+}
+.line-section .line_tab:nth-child(1) {
+  left: 0;
+  background: url(../images/line_01.png) center;
+  background-size: cover;
+}
+.line-section .line_tab:nth-child(2) {
+  left: 33.33%;
+  background: url(../images/line_02.png) center;
+  background-size: cover;
+}
+.line-section .line_tab:nth-child(3) {
+  left: 66.66%;
+  background: url(../images/line_03.png) center;
+  background-size: cover;
+}
+.line-section .line_tab:hover {
+  opacity: 1;
+}
+.line-section .line_tab_current {
+  margin-top: 0;
+  height: 5rem;
+  line-height: 5rem;
+  opacity: 1;
+}
+.line-section .line_tab-content {
+  position: absolute;
+  width: 100%;
+  padding: 0.5rem;
+  top: 35rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  z-index: 11;
+}
+.line-section .line_tab-content.line_tab-content_current {
+  z-index: 12;
+}
+
+.line-section .swiper-slide {
+  padding: 0.5rem;
+}
+.line-section .swiper ul {
+  position: relative;
+}
+.line-section .swiper li {
+  transition: all 0.4s;
+}
+.line-section .swiper li:nth-child(2) {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+.line-section .swiper img {
+  width: 100%;
+}
+.line-section .swiper p:nth-child(2) {
+  margin-top: 3rem;
+  color: #999;
+}
+.line-section .swiper p:nth-child(3) {
+  line-height: 3;
+}
+.line-section .swiper p:nth-child(4) {
+  font-weight: bold;
+  line-height: 3;
+}
+.line-section .swiper a:focus {
+  outline: none;
+} /* 드래그로 슬라이드할 때 outline 없애기 */
+.line-section .swiper a:hover li:nth-child(1) {
+  opacity: 0;
+}
+.line-section .swiper a:hover li:nth-child(2) {
+  opacity: 1;
 }
 
 /* tv-section */
 
-.tv_poto {
+.tv-section .iframebox {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.tv-section .iframebox iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.tv-section .tv_small {
+  margin-top: 0.5rem;
+}
+.tv-section .tv_poto {
   position: relative;
   width: 49.5%;
   overflow: hidden;
 }
-.tv_poto > img {
+.tv-section .tv_poto > img {
   width: 100%;
 }
-.tv_gif {
+.tv-section .tv_gif {
   position: absolute;
   display: none;
   top: 0;
   left: 0;
 }
-.tv_poto:hover .tv_gif {
+.tv-section .tv_poto:hover .tv_gif {
   display: block;
 }
-.tv_gif video {
+.tv-section .tv_gif video {
   width: 100%;
 }
 
 /* sns-section */
 
-.swiper-wrapper.animated {
+.sns-section .swiper-wrapper.animated {
   transition: 0.5s ease-out;
 }
-.swiper-slide .square {
+.sns-section .swiper-slide .square {
   width: 100%;
 }
 .sns-section .swiper-slide {
@@ -59,6 +235,7 @@
 }
 .sns-section .text {
   position: absolute;
+  width: 100%;
   bottom: 0;
   left: 0;
   transform: translateY(100%);
@@ -91,31 +268,103 @@
 }
 
 @media (min-width: 576px) {
-  .tv-section .tv_small {
-    width: 520px;
-    margin: 0 auto;
+  /* line-section */
+
+  .line-section {
+    height: 90rem;
+  }
+  .line-section .line_bn li {
+    height: 75rem;
+    padding-top: 4rem;
+  }
+
+  .line-section .line_tabs {
+    height: 6rem;
+    top: 7rem;
+  }
+  .line-section .line_tab {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+  }
+  .line-section .line_tab_current {
+    margin-top: 0;
+    height: 6rem;
+    line-height: 6rem;
+  }
+  .line-section .line_tab-content {
+    width: 540px;
   }
 }
 @media (min-width: 768px) {
+  /* mb-section */
+
   .mb-section {
     margin-top: -7rem;
   }
 
-  .tv-section .tv_small {
-    width: 700px;
-    margin: 0 auto;
+  /* line-section */
+
+  .line-section {
+    height: 100rem;
   }
-  .tv_poto {
-    width: 33%;
+  .line-section .line_bn li {
+    height: 85rem;
+  }
+
+  .line-section .line_tab-content {
+    width: 720px;
+    padding: 0.8rem;
+  }
+
+  .line-section .swiper-slide {
+    padding: 0.8rem;
   }
 }
 @media (min-width: 992px) {
-  .tv-section .tv_small {
-    width: 940px;
-    margin: 0 auto;
+  /* tv-section */
+
+  .tv-section .tv_poto {
+    width: 33%;
   }
 }
 @media (min-width: 1200px) {
+  /* line-section */
+
+  .line-section {
+    height: 90rem;
+  }
+  .line-section .line_bn li {
+    height: 80rem;
+    top: 16rem;
+  }
+
+  .line-section .line_tabs {
+    width: 60rem;
+    height: 7rem;
+    top: 9rem;
+  }
+  .line-section .line_tab {
+    width: 33.33%;
+    height: 5rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    line-height: 5rem;
+  }
+  .line-section .line_tab_current {
+    margin-top: 0;
+    height: 7rem;
+    line-height: 7rem;
+  }
+  .line-section .line_tab-content {
+    width: 60rem;
+    padding: 1rem;
+    top: 38rem;
+    transform: translateX(-20%);
+  }
+
+  .line-section .swiper-slide {
+    padding: 1rem;
+  }
 }
 @media (min-width: 1400px) {
 }
