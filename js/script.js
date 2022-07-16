@@ -1,29 +1,45 @@
 $(document).ready(function () {
   // nav
 
-  var b = $("nav").offset().top;
+  var nav_offset = $("nav").offset().top;
   // nav 처음위치, nav가 fixed되있어서 스크롤하면 위치가 바뀌기 때문에 스크롤 선언 밖에 적음
+  var menu_offset = $(".menu_icon").offset().top;
 
   $(window).scroll(function () {
+    var scrollTop = $(this).scrollTop(); // 스크롤 위치
+
     // nav 스크롤 효과
-    var a = $(this).scrollTop(); // 스크롤 위치
-    if (b < a) {
-      $("nav").addClass("on");
+    if (nav_offset < scrollTop) {
+      $("nav").addClass("header_scroll");
     } else {
-      $("nav").removeClass("on");
+      $("nav").removeClass("header_scroll");
+    }
+
+    // menu 스크롤 효과
+    if (menu_offset < scrollTop) {
+      $(".menu_wrap").addClass("header_scroll");
+    } else {
+      $(".menu_wrap").removeClass("header_scroll");
     }
   });
 
   // 메뉴
 
   $(".menu_icon").click(function () {
+    $(".search_icon p:nth-child(1)").toggleClass("on");
+    $(".search_icon p:nth-child(2)").toggleClass("on");
+    $(".login").toggleClass("on");
     $(".menu_icon p:nth-child(1)").toggleClass("on");
     $(".menu_icon p:nth-child(2)").toggleClass("on");
     $(".menu_icon p:nth-child(3)").toggleClass("on");
     $(".menu").toggleClass("on");
-    $(".search_icon p:nth-child(1)").toggleClass("on");
-    $(".search_icon p:nth-child(2)").toggleClass("on");
   });
+
+/*   var menu_1_height = document.querySelector(".menu_1").offsetHeight;
+  function changeStyle() {
+    document.querySelector(".menu_2").style.height = menu_1_height + "px";
+  }
+  changeStyle(); */
 
   // line 배너
 
@@ -73,7 +89,7 @@ $(document).ready(function () {
     $(".line_tightening").css("z-index", "12");
   });
 
-  // 푸터 - 하위메뉴 화살표
+  // 하위메뉴 화살표
 
   $(".icon_arrow_text")
     .parent()
@@ -81,10 +97,15 @@ $(document).ready(function () {
       $(this).children(".icon_arrow_text").toggleClass("on");
     });
 
-  // 푸터 - 아코디언
+  // 아코디언
 
-  $(".accordion-click").click(function () {
-    $(".accordion-block").slideToggle();
+  $(".accordion-click_footer").click(function () {
+    $(".accordion-block_footer").slideToggle();
+  });
+  $(".menu h2").click(function () {
+    $(this).siblings().slideToggle();
+    $(this).parent().siblings().children(".menu_sub").slideUp();
+    $(this).parent().siblings().find(".icon_arrow_text").removeClass("on");
   });
 });
 
@@ -125,3 +146,5 @@ function scrollToTop() {
     }
   }, 15);
 }
+
+console.log(document.querySelector(".menu_wrap").offsetHeight);
