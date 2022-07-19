@@ -26,10 +26,6 @@ const mb_swiper = new Swiper(".mb-section .swiper", {
   },
 });
 
-
-
-
-
 const best_swiper = new Swiper(".best-section .swiper", {
   speed: 300, // 슬라이드 / 페이드 속도
   slidesPerView: 1,
@@ -87,10 +83,6 @@ const best_swiper = new Swiper(".best-section .swiper", {
   }, // 반응형 슬라이드
 });
 
-
-
-
-
 const line_swiper = new Swiper(".line-section .swiper", {
   speed: 300, // 슬라이드 / 페이드 속도
   slidesPerView: 2,
@@ -135,10 +127,6 @@ const line_swiper = new Swiper(".line-section .swiper", {
     },
   }, // 반응형 슬라이드
 });
-
-
-
-
 
 const sns_swiper = new Swiper(".sns-section .swiper", {
   speed: 300, // 슬라이드 / 페이드 속도
@@ -233,4 +221,10 @@ const sns_swiper = new Swiper(".sns-section .swiper", {
     stopOnLastSlide: false,
     reverseDirection: false,
   },
+});
+
+const cleansing_swiper = new Swiper(".cleansing-nav-sec .swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 0,
+  freeMode: true,
 });

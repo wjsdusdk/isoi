@@ -5090,6 +5090,16 @@ section {
   margin-bottom: 10rem;
   text-align: center;
 }
+.square {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.square::after {
+  content: "";
+  display: block;
+  padding-bottom: 70%;
+}
 
 @media (min-width: 576px) {
   h4 {
