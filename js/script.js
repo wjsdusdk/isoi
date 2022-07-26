@@ -1,29 +1,5 @@
 $(document).ready(function () {
-  // nav
-
-  var nav_offset = $("nav").offset().top;
-  // nav 처음위치, nav가 fixed되있어서 스크롤하면 위치가 바뀌기 때문에 스크롤 선언 밖에 적음
-  var menu_offset = $(".menu_icon").offset().top;
-
-  $(window).scroll(function () {
-    var scrollTop = $(this).scrollTop(); // 스크롤 위치
-
-    // nav 스크롤 효과
-    if (nav_offset < scrollTop) {
-      $("nav").addClass("header_scroll");
-    } else {
-      $("nav").removeClass("header_scroll");
-    }
-
-    // menu 스크롤 효과
-    if (menu_offset < scrollTop) {
-      $(".menu_wrap").addClass("header_scroll");
-    } else {
-      $(".menu_wrap").removeClass("header_scroll");
-    }
-  });
-
-  // 메뉴
+  // .menu
 
   $(".menu_icon").click(function () {
     $(".search_icon p:nth-child(1)").toggleClass("on");
@@ -35,13 +11,7 @@ $(document).ready(function () {
     $(".menu").toggleClass("on");
   });
 
-/*   var menu_1_height = document.querySelector(".menu_1").offsetHeight;
-  function changeStyle() {
-    document.querySelector(".menu_2").style.height = menu_1_height + "px";
-  }
-  changeStyle(); */
-
-  // line 배너
+  // line banner
 
   $(".line_tab:nth-child(1)").click(function () {
     $(".line_bn li:nth-child(1)").css("display", "block");
@@ -59,7 +29,7 @@ $(document).ready(function () {
     $(".line_bn li:nth-child(3)").css("display", "block");
   });
 
-  // line 탭
+  // line tab
 
   $(".line_tab").click(function () {
     var tab_id = $(this).attr("data-tab");
@@ -71,7 +41,7 @@ $(document).ready(function () {
     $("#" + tab_id).addClass("line_tab-content_current");
   });
 
-  // line 슬라이드
+  // line slide
 
   $(".line_tab li:nth-child(1)").click(function () {
     $(".line_blemish").css("z-index", "12");
@@ -89,7 +59,7 @@ $(document).ready(function () {
     $(".line_tightening").css("z-index", "12");
   });
 
-  // 하위메뉴 화살표
+  // submenu arrow
 
   $(".icon_arrow_text")
     .parent()
@@ -97,7 +67,7 @@ $(document).ready(function () {
       $(this).children(".icon_arrow_text").toggleClass("on");
     });
 
-  // 아코디언
+  // accordion
 
   $(".accordion-click_footer").click(function () {
     $(".accordion-block_footer").slideToggle();
@@ -109,6 +79,42 @@ $(document).ready(function () {
   });
 });
 
+// scroll - header
+
+const header = document.querySelector("header");
+const headerHeight = header.offsetHeight;
+
+function scrollHeader() {
+  if (scrollY >= headerHeight) {
+    header.classList.add("on");
+  } else {
+    header.classList.remove("on");
+  }
+}
+
+window.addEventListener("scroll", scrollHeader);
+
+// line
+/* 
+const lineH4 = document.querySelector(".line-section h4");
+const lineHeight1 = document.querySelector(".line-section h4").offsetHeight;
+const lineHeight2 = parseInt(window.getComputedStyle(lineH4).getPropertyValue("margin-bottom"));
+const lineHeight3 = document.querySelector(".line_tabs").offsetHeight;
+const lineHeight4 = document.querySelector(".line-section .text").offsetHeight;
+const lineSum = lineHeight1 + lineHeight2 + lineHeight3 + lineHeight4;
+const lineContent = document.querySelector(".line_tab-content");
+
+
+window.onload = function(){
+  lineContent.style.position = absolute;
+  lineContent.style.top = lineSum + "px";
+}
+
+console.log(lineSum + "px");
+
+console.log(document.querySelector(".line-section .text").offsetHeight);
+console.log(window.getComputedStyle(lineH4).getPropertyValue("margin-bottom"));
+ */
 // to-top
 
 var btt = document.getElementById("to-top"),
@@ -147,4 +153,26 @@ function scrollToTop() {
   }, 15);
 }
 
-console.log(document.querySelector(".menu_wrap").offsetHeight);
+// resize
+
+window.onresize = function () {
+  document.location.reload();
+};
+
+// 나중에 지우기
+
+/* console.log(document.querySelector(".line_tab-content").offsetHeight); */
+/* 
+if (matchMedia("screen and (max-width: 575px)").matches) {
+  console.log("mobile1");
+} else if (matchMedia("screen and (max-width: 767px)").matches) {
+  console.log("mobile2");
+} else if (matchMedia("screen and (max-width: 991px)").matches) {
+  console.log("tablet1");
+} else if (matchMedia("screen and (max-width: 1199px)").matches) {
+  console.log("tablet2");
+} else if (matchMedia("screen and (max-width: 1399px)").matches) {
+  console.log("desktop1");
+} else {
+  console.log("desktop2");
+} */

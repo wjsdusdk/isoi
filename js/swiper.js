@@ -64,16 +64,12 @@ const best_swiper = new Swiper(".best-section .swiper", {
 
   // Breakpoints
   breakpoints: {
-    768: {
+    576: {
       // when window width is >= 768px
       slidesPerView: 2,
     },
     992: {
       // when window width is >= 1024px
-      slidesPerView: 3,
-    },
-    1200: {
-      // when window width is >= 1200px
       slidesPerView: 3,
     },
     1400: {

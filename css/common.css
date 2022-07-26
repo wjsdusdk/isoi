@@ -46,7 +46,7 @@ header {
 header h6 {
   height: 2.3rem;
 }
-.header_scroll {
+header.on {
   background: #fff;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 } /* 제이쿼리적용 */
