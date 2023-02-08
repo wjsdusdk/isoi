@@ -2,31 +2,28 @@ $(document).ready(function () {
   // .menu
 
   $(".menu_icon").click(function () {
-    $(".search_icon p:nth-child(1)").toggleClass("on");
-    $(".search_icon p:nth-child(2)").toggleClass("on");
-    $(".login").toggleClass("on");
-    $(".menu_icon p:nth-child(1)").toggleClass("on");
-    $(".menu_icon p:nth-child(2)").toggleClass("on");
-    $(".menu_icon p:nth-child(3)").toggleClass("on");
+    $(".search_icon").toggleClass("on");
+    $(".login_icon").toggleClass("on");
+    $(".menu_icon").toggleClass("on");
     $(".menu").toggleClass("on");
   });
 
   // line banner
 
   $(".line_tab:nth-child(1)").click(function () {
-    $(".line_bn li:nth-child(1)").css("display", "block");
-    $(".line_bn li:nth-child(2)").css("display", "none");
-    $(".line_bn li:nth-child(3)").css("display", "none");
+    $(".line_bn .bg:nth-child(1)").css("display", "block");
+    $(".line_bn .bg:nth-child(2)").css("display", "none");
+    $(".line_bn .bg:nth-child(3)").css("display", "none");
   });
   $(".line_tab:nth-child(2)").click(function () {
-    $(".line_bn li:nth-child(1)").css("display", "none");
-    $(".line_bn li:nth-child(2)").css("display", "block");
-    $(".line_bn li:nth-child(3)").css("display", "none");
+    $(".line_bn .bg:nth-child(1)").css("display", "none");
+    $(".line_bn .bg:nth-child(2)").css("display", "block");
+    $(".line_bn .bg:nth-child(3)").css("display", "none");
   });
   $(".line_tab:nth-child(3)").click(function () {
-    $(".line_bn li:nth-child(1)").css("display", "none");
-    $(".line_bn li:nth-child(2)").css("display", "none");
-    $(".line_bn li:nth-child(3)").css("display", "block");
+    $(".line_bn .bg:nth-child(1)").css("display", "none");
+    $(".line_bn .bg:nth-child(2)").css("display", "none");
+    $(".line_bn .bg:nth-child(3)").css("display", "block");
   });
 
   // line tab
@@ -39,24 +36,6 @@ $(document).ready(function () {
 
     $(this).addClass("line_tab_current");
     $("#" + tab_id).addClass("line_tab-content_current");
-  });
-
-  // line slide
-
-  $(".line_tab li:nth-child(1)").click(function () {
-    $(".line_blemish").css("z-index", "12");
-    $(".line_intensive").css("z-index", "11");
-    $(".line_tightening").css("z-index", "11");
-  });
-  $(".line_tab li:nth-child(2)").click(function () {
-    $(".line_blemish").css("z-index", "11");
-    $(".line_intensive").css("z-index", "12");
-    $(".line_tightening").css("z-index", "11");
-  });
-  $(".line_tab li:nth-child(3)").click(function () {
-    $(".line_blemish").css("z-index", "11");
-    $(".line_intensive").css("z-index", "11");
-    $(".line_tightening").css("z-index", "12");
   });
 
   // submenu arrow
@@ -94,27 +73,6 @@ function scrollHeader() {
 
 window.addEventListener("scroll", scrollHeader);
 
-// line
-/* 
-const lineH4 = document.querySelector(".line-section h4");
-const lineHeight1 = document.querySelector(".line-section h4").offsetHeight;
-const lineHeight2 = parseInt(window.getComputedStyle(lineH4).getPropertyValue("margin-bottom"));
-const lineHeight3 = document.querySelector(".line_tabs").offsetHeight;
-const lineHeight4 = document.querySelector(".line-section .text").offsetHeight;
-const lineSum = lineHeight1 + lineHeight2 + lineHeight3 + lineHeight4;
-const lineContent = document.querySelector(".line_tab-content");
-
-
-window.onload = function(){
-  lineContent.style.position = absolute;
-  lineContent.style.top = lineSum + "px";
-}
-
-console.log(lineSum + "px");
-
-console.log(document.querySelector(".line-section .text").offsetHeight);
-console.log(window.getComputedStyle(lineH4).getPropertyValue("margin-bottom"));
- */
 // to-top
 
 var btt = document.getElementById("to-top"),

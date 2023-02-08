@@ -6,6 +6,163 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+/* my */
+
+.a {
+  background: pink;
+}
+.b {
+  background: peachpuff;
+}
+.c {
+  background: palegoldenrod;
+}
+.d {
+  background: powderblue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; /* 기본 설정이 16px이기 때문에 10px */
+}
+body {f
+  font-family: "맑은 고딕";
+  font-size: 1.3rem;
+  color: #333;
+}
+li {
+  margin-bottom: 1rem;
+  list-style: none;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+i {
+  font-style: normal;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+h1 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+h4 {
+  margin-bottom: 6rem;
+  font-size: 3rem;
+  font-weight: normal;
+  line-height: 3rem;
+}
+h5 {
+  margin-bottom: 8rem;
+  font-size: 4rem;
+  font-weight: normal;
+}
+h6 img {
+  height: 100%;
+}
+section {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  text-align: center;
+}
+.square {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.square::after {
+  content: "";
+  display: block;
+  padding-bottom: 70%;
+}
+
+@media (min-width: 576px) {
+  h4 {
+    margin-bottom: 6.5rem;
+    font-size: 3.25rem;
+    line-height: 3.25rem;
+  }
+  h5 {
+    margin-bottom: 8.5rem;
+    font-size: 4.25rem;
+  }
+  section {
+    margin-top: 11rem;
+    margin-bottom: 11rem;
+  }
+}
+
+@media (min-width: 768px) {
+  h4 {
+    margin-bottom: 7rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+  h5 {
+    margin-bottom: 9rem;
+    font-size: 4.5rem;
+  }
+  section {
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+  }
+}
+
+@media (min-width: 992px) {
+  h4 {
+    margin-bottom: 7.5rem;
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+  }
+  h5 {
+    margin-bottom: 9.5rem;
+    font-size: 4.75rem;
+  }
+  section {
+    margin-top: 13rem;
+    margin-bottom: 13rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  h4 {
+    margin-bottom: 8rem;
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  h5 {
+    margin-bottom: 10rem;
+    font-size: 5rem;
+  }
+  section {
+    margin-top: 14rem;
+    margin-bottom: 14rem;
+  }
+}
+
+@media (min-width: 1400px) {
+}
+/*  */
+
 .container-full {
   width: 100%;
 }
@@ -5012,161 +5169,6 @@
   .d-print-none {
     display: none !important;
   }
-}
-
-/* my */
-
-.a {
-  background: pink;
-}
-.b {
-  background: peachpuff;
-}
-.c {
-  background: palegoldenrod;
-}
-.d {
-  background: powderblue;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-  font-size: 62.5%; /* 기본 설정이 16px이기 때문에 10px */
-}
-body {
-  font-family: "맑은 고딕";
-  font-size: 1.3rem;
-  color: #333;
-}
-li {
-  margin-bottom: 1rem;
-  list-style: none;
-}
-img {
-  vertical-align: middle;
-}
-a {
-  text-decoration: none;
-  color: #333;
-}
-i {
-  font-style: normal;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-h1 {
-  font-size: 1.5rem;
-  font-weight: normal;
-}
-h2 {
-  font-size: 2rem;
-  font-weight: normal;
-}
-h3 {
-  font-size: 3rem;
-  font-weight: normal;
-}
-h4 {
-  margin-bottom: 6rem;
-  font-size: 3rem;
-  font-weight: normal;
-  line-height: 3rem;
-}
-h5 {
-  margin-bottom: 8rem;
-  font-size: 4rem;
-  font-weight: normal;
-}
-h6 img {
-  height: 100%;
-}
-section {
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-  text-align: center;
-}
-.square {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.square::after {
-  content: "";
-  display: block;
-  padding-bottom: 70%;
-}
-
-@media (min-width: 576px) {
-  h4 {
-    margin-bottom: 6.5rem;
-    font-size: 3.25rem;
-    line-height: 3.25rem;
-  }
-  h5 {
-    margin-bottom: 8.5rem;
-    font-size: 4.25rem;
-  }
-  section {
-    margin-top: 11rem;
-    margin-bottom: 11rem;
-  }
-}
-
-@media (min-width: 768px) {
-  h4 {
-    margin-bottom: 7rem;
-    font-size: 3.5rem;
-    line-height: 3.5rem;
-  }
-  h5 {
-    margin-bottom: 9rem;
-    font-size: 4.5rem;
-  }
-  section {
-    margin-top: 12rem;
-    margin-bottom: 12rem;
-  }
-}
-
-@media (min-width: 992px) {
-  h4 {
-    margin-bottom: 7.5rem;
-    font-size: 3.75rem;
-    line-height: 3.75rem;
-  }
-  h5 {
-    margin-bottom: 9.5rem;
-    font-size: 4.75rem;
-  }
-  section {
-    margin-top: 13rem;
-    margin-bottom: 13rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  h4 {
-    margin-bottom: 8rem;
-    font-size: 4rem;
-    line-height: 4rem;
-  }
-  h5 {
-    margin-bottom: 10rem;
-    font-size: 5rem;
-  }
-  section {
-    margin-top: 14rem;
-    margin-bottom: 14rem;
-  }
-}
-
-@media (min-width: 1400px) {
 }
 
 .w-auto {
